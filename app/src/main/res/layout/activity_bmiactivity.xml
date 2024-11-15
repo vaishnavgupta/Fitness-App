@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMIActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#BCFBFBFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/alfradfont"
+                android:textSize="25dp"
+                android:layout_marginTop="20dp"
+                android:text="Height (in Centimeters)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/heightTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/alfradsemibold"
+                android:text="140"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/minusHeight"
+                android:layout_width="40dp"
+                app:layout_constraintBottom_toBottomOf="@id/heightTv"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintEnd_toStartOf="@+id/heightTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/heightTv"
+                app:srcCompat="@drawable/minusicon" />
+
+            <ImageView
+                android:id="@+id/plusHeight"
+                android:layout_width="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/heightTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/heightTv"
+                app:layout_constraintTop_toTopOf="@+id/heightTv"
+                app:srcCompat="@drawable/plusicon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#BCFBFBFB"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/weighthead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/alfradfont"
+                android:text="Weight (in Kilograms)"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weightTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/alfradsemibold"
+                android:text="50"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weighthead" />
+
+            <ImageView
+                android:id="@+id/minusWeight"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintBottom_toBottomOf="@id/weightTv"
+                app:layout_constraintEnd_toStartOf="@+id/weightTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/weightTv"
+                app:srcCompat="@drawable/minusicon" />
+
+            <ImageView
+                android:id="@+id/plusWeight"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                app:layout_constraintBottom_toBottomOf="@id/weightTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/weightTv"
+                app:layout_constraintTop_toTopOf="@+id/weightTv"
+                app:srcCompat="@drawable/plusicon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnBMI"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:textSize="18dp"
+        android:text="CALCULATE BMI"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView4"
+        app:layout_constraintStart_toStartOf="@+id/cardView4"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardBackgroundColor="#BCFBFBFB"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="25dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBMI">
+
+
+        <TextView
+            android:id="@+id/resultBmi"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/alfradsemibold"
+            android:textSize="25dp"
+            android:hint="Your BMI will be displayed here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
